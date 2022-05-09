@@ -20,7 +20,7 @@ const Navbar = () => {
   const logoImageStyle = {
     width: '5vw',
     height: '5vw',
-    backgroundImage: 'url("https://cdn-icons-png.flaticon.com/512/3594/3594083.png")',
+    backgroundImage: 'url("../resources/3594083.png")',
     backgroundImageSize: 'cover',
     backgroundColor: 'var(--linkColor)',
   }
