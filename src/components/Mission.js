@@ -6,8 +6,8 @@ const Mission = (prop) => {
 
   return (
     <tr>
-      <td>{mission.mission_name}</td>
-      <td>{mission.description}</td>
+      <td className="mission-title">{mission.mission_name}</td>
+      <td className="mission-paragraph">{mission.description}</td>
       <td>
           <button
               className="member"
