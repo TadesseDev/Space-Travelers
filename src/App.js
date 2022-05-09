@@ -1,8 +1,8 @@
 // import './App.scss';
 import Navbar from './components/Navbar'
-import Rockets from './components/pages/Rockets';
-import Missions from './components/pages/Missions';
-import Profile from './components/pages/Profile'
+import Rockets from './pages/Rockets';
+import Missions from './pages/Missions';
+import Profile from './pages/Profile'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 const App = () =>
