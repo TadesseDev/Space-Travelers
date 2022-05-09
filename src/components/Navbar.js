@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 const Navbar = () => {
   const navStyle = {
     display: 'flex',
@@ -17,13 +18,6 @@ const Navbar = () => {
     textDecoration: isActive ? 'underline' : 'none',
     color: 'var(--linkColor)',
   });
-  const logoImageStyle = {
-    width: '5vw',
-    height: '5vw',
-    backgroundImage: 'url("../resources/3594083.png")',
-    backgroundImageSize: 'cover',
-    backgroundColor: 'var(--linkColor)',
-  }
   const lstLink = ({ isActive }) => ({
     textDecoration: isActive ? 'underline' : 'none',
     color: 'var(--linkColor)',
@@ -39,7 +33,7 @@ const Navbar = () => {
   return (
     <nav style={navStyle}>
       <div id="logo" style={logoStyle}>
-        <span id="logo-img" style={logoImageStyle}>
+        <span id="logo-img">
         </span>
         <h1 id="logo-text">
           Space Travelers' Hubs

@@ -14,3 +14,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#logo-img {
+  width: 5vw;
+  height: 5vw;
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3594/3594083.png");
+  background-size: contain;
+}
