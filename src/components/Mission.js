@@ -8,7 +8,7 @@ const Mission = (prop) => {
     <tr>
       <td className="mission-title">{mission.mission_name}</td>
       <td className="mission-paragraph">{mission.description}</td>
-      <td>
+      <td className="member-mission">
           <button
               className="member"
               type="button"
@@ -17,7 +17,7 @@ const Mission = (prop) => {
             NOT A MEMBER
           </button>
       </td>
-      <td>
+      <td className="join-mission">
           <button
             className="join"
             type="button"
