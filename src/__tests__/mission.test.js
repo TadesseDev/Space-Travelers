@@ -12,13 +12,18 @@ describe('Test Mission component', () => {
   const useSelectorMock = reactRedux.useSelector;
   const useDispatchMock = reactRedux.useDispatch;
   const mockStore = {
-      missions: [
-        {
-          mission_name: 'lkjhg',
-          mission_id: '12s34',
-          description: 'khjjkggk',
-        },
-      ],
+    Missions: [
+      {
+        mission_name: 'lkjhg',
+        mission_id: '12s34',
+        description: 'khjjkggk',
+      },
+      {
+        mission_name: 'lkjhg',
+        mission_id: '12s34',
+        description: 'khjjkggk',
+      },
+    ],
   };
 
   beforeEach(() => {
@@ -31,9 +36,24 @@ describe('Test Mission component', () => {
     useSelectorMock.mockClear();
   });
 
-  test('Fetch and display Missions', () => {
+  test('Fetch and display Missions table', () => {
     render(<Missions />);
-    expect(screen.getByTestId('mission-list-test')).toBeInTheDocument();
+    expect(screen.getByTestId('mission-test')).toBeInTheDocument();
+  });
+  
+  test('Create a Mission component inside Missions table', () => {
+    const missionData = useSelectorMock(
+      (mockStore) => mockStore.Missions[0],
+    );
+    render(
+      <Mission
+        key={missionData.mission_id}
+        id={missionData.mission_id}
+        reserved={missionData.reserved}
+        mission={missionData}
+      />,
+    );
+    expect(screen.getByTestId('mission-item')).toBeInTheDocument();
   });
 });
 

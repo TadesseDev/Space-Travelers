@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Check if Missions page renders correctly 1`] = `
-<div>
+<div
+  data-testid="mission-test"
+>
   <table>
     <thead>
       <tr>
