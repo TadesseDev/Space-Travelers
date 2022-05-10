@@ -3,12 +3,21 @@ import { Table, Row, Container, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux'
 export default function Profile() {
   const reservedRockets = useSelector(store => store.Rockets.filter(rocket => rocket.reserved));
-  console.log(reservedRockets);
+  const reservedMissions = useSelector((state) => state.Missions.filter((mission) => mission.reserved, ));
+  
   return (
     <Container>
       <Row>
         <Col sm={6}>
-
+        <h2> My Missions</h2>
+          <Table hover variant="light">
+            <tbody>
+              {reservedMissions.map(mission =>
+                <tr>
+                  <td>{mission.mission_name}</td>
+                </tr>
+              )}</tbody>
+          </Table>
         </Col>
         <Col sm={6} >
           <h2> My Rockets</h2>
