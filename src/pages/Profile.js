@@ -10,7 +10,12 @@ export default function Profile() {
         <Col sm={6} >
           <h2> My Rockets</h2>
           <Table hover variant="light">
-            <tbody></tbody>
+            <tbody>
+              {reservedRockets.map(rocket =>
+                <tr>
+                  <td>{rocket.rocket_name}</td>
+                </tr>
+              )}</tbody>
           </Table>
         </Col>
       </Row>
