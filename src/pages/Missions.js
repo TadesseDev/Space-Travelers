@@ -8,7 +8,9 @@ export default function Missions() {
   const dispatch = useDispatch();
   const Missions = useSelector((state) => state.Missions);
   useEffect(() => {
-    dispatch(getMissions());
+    if ( Missions.length <= 0)  {
+      dispatch(getMissions());
+    }
   }, []);
 
   return (

@@ -19,7 +19,7 @@ export default function Rocket({ id, name, description, image, reserved }) {
       </Col>
       <Col className="rocket-description">
         <h3 className="text-capitalize">{name}</h3>
-        <p>{reserved && <Badge bg="success" className="-5">reserver</Badge>}{description}</p>
+        <p>{reserved && <Badge bg="success" className="-5" style={{ marginRight: '1vw' }}>reserver</Badge>}{description}</p>
         {reserved ?
           ([<Button variant="outline-dark " className="reserved text-capitalize" id={id} data-id={id} data-reserved={0} onClick={toggleReservation} >cancel reservation</Button>]) :
           (<Button className="not-reserved text-capitalize" data-id={id} id={id} data-reserved={1} onClick={toggleReservation} >reserve rocket</Button>)}
