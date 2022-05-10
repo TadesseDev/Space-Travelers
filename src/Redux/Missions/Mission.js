@@ -5,8 +5,8 @@ const initialState = [];
 export const reserveMission = (id, status) => (
   {
     type: RESERVATION,
-    mission: { id: Number(id),
-      status: Number(status),
+    mission: { id,
+      status: Boolean(status),
     }
   }
 );
@@ -29,7 +29,7 @@ const missionsReducer = (state = initialState, action) => {
     case RESERVATION:
       return [...state.map(mission => {
         if (mission.id === action.mission.id)
-          return { ...mission, reserved: Boolean(action.mission.status) }
+          return { ...mission, reserved: action.mission.status }
         return mission;
         }
       )];
