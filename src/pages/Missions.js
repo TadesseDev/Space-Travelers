@@ -27,6 +27,7 @@ export default function Missions() {
             <Mission
               key={mission.mission_id}
               id={mission.mission_id}
+              reserved={mission.reserved}
               mission={mission}
             />
           ))}

@@ -6,7 +6,7 @@ export const reserveMission = (id, status) => (
   {
     type: RESERVATION,
     mission: { id,
-      status: Boolean(status),
+      status: Boolean(Number(status)),
     }
   }
 );
@@ -28,7 +28,7 @@ const missionsReducer = (state = initialState, action) => {
 
     case RESERVATION:
       return [...state.map(mission => {
-        if (mission.id === action.mission.id)
+        if (mission.mission_id === action.mission.id)
           return { ...mission, reserved: action.mission.status }
         return mission;
         }
