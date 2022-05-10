@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getMissions } from '../Redux/Missions/Mission';
-import '@testing-library/jest-dom';
 import Mission from '../components/Mission';
 import './Missions.scss';
 
