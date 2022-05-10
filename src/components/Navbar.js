@@ -6,7 +6,9 @@ const Navbar = () => {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: '0 5vw'
+    margin: '0 5vw',
+    padding: '2vw 0',
+    borderBottom: '1px solid #dee2e6'
   }
   const ulStyle = {
     display: 'flex',
@@ -22,7 +24,7 @@ const Navbar = () => {
     textDecoration: isActive ? 'underline' : 'none',
     color: 'var(--linkColor)',
     borderLeft: '1px solid silver',
-    paddingLeft: '5px',
+    paddingLeft: '20px',
   });
 
   const logoStyle = {

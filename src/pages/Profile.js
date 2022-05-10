@@ -6,7 +6,7 @@ export default function Profile() {
   const reservedMissions = useSelector((state) => state.Missions.filter((mission) => mission.reserved, ));
   
   return (
-    <Container style={{ margin: '5vw' }}>
+    <Container style={{ margin: '2vw 5vw' }}>
       <Row>
         <Col sm={6}>
         <h2>My Missions</h2>
