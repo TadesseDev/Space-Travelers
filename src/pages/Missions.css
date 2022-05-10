@@ -60,6 +60,25 @@ table tbody tr:nth-child(even) {
   padding: 0.2vw 0.5vw;
 }
 
+.active {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  background-color: #2ba8be;
+  color: white;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: bold;
+  padding: 0.2vw 0.5vw;
+}
+
 .join {
   -webkit-appearance: none;
      -moz-appearance: none;
