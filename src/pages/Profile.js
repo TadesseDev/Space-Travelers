@@ -6,11 +6,11 @@ export default function Profile() {
   const reservedMissions = useSelector((state) => state.Missions.filter((mission) => mission.reserved, ));
   
   return (
-    <Container>
+    <Container style={{ margin: '5vw' }}>
       <Row>
         <Col sm={6}>
-        <h2> My Missions</h2>
-          <Table hover variant="light">
+        <h2>My Missions</h2>
+          <Table className="profile-table" hover variant="light">
             <tbody>
               {reservedMissions.map(mission =>
                 <tr>
@@ -20,8 +20,8 @@ export default function Profile() {
           </Table>
         </Col>
         <Col sm={6} >
-          <h2> My Rockets</h2>
-          <Table hover variant="light">
+          <h2>My Rockets</h2>
+          <Table className="profile-table" hover variant="light">
             <tbody>
               {reservedRockets.map(rocket =>
                 <tr>
