@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap'
+import { Row, Col, Button, Badge } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { toggleReservedAction } from '../Redux/Rockets/Rocket';
@@ -19,9 +19,9 @@ export default function Rocket({ id, name, description, image, reserved }) {
       </Col>
       <Col className="rocket-description">
         <h3 className="text-capitalize">{name}</h3>
-        <p>{description}</p>
+        <p>{reserved && <Badge bg="success" className="-5">reserver</Badge>}{description}</p>
         {reserved ?
-          (<Button variant="outline-dark " className="reserved text-capitalize" id={id} data-id={id} data-reserved={0} onClick={toggleReservation} >cancel reservation</Button>) :
+          ([<Button variant="outline-dark " className="reserved text-capitalize" id={id} data-id={id} data-reserved={0} onClick={toggleReservation} >cancel reservation</Button>]) :
           (<Button className="not-reserved text-capitalize" data-id={id} id={id} data-reserved={1} onClick={toggleReservation} >reserve rocket</Button>)}
       </Col>
     </Row>
