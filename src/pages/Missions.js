@@ -26,6 +26,7 @@ export default function Missions() {
           {Missions.map((mission) => (
             <Mission
               key={mission.mission_id}
+              id={mission.mission_id}
               mission={mission}
             />
           ))}

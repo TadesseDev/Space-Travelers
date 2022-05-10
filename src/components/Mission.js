@@ -1,8 +1,15 @@
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { reserveMission } from '../Redux/Missions/Mission';
 
 const Mission = (prop) => {
-  const { mission } = prop;
-//   const dispatch = useDispatch();
+  const { mission, id } = prop;
+  const dispatch = useDispatch();
+
+  const reserve = (event) => {
+    const reserve = event.target.getAttribute('data-reserved');
+    const missionId = event.target.getAttribute('data-id');
+    dispatch(reserveMission(missionId, reserve));
+  }
 
   return (
     <tr>
@@ -22,6 +29,10 @@ const Mission = (prop) => {
             className="join"
             type="button"
             label="join Mission"
+            id={id}
+            data-id={id}
+            data-reserved={0}
+            onClick={reserve} 
           >
             Join Mission
           </button>
