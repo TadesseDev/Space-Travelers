@@ -18,11 +18,11 @@ const Mission = (prop) => {
       <td className="member-mission">
       {reserved ?
            (<button
-            className="active"
+            className="active-member"
             type="button"
             label="Active Member"
           >
-            ACTIVE MEMBER
+            Active Member
           </button>) :
           (<button
               className="member"
