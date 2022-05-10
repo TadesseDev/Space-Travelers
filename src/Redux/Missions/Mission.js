@@ -14,7 +14,6 @@ export const getMissions = () => async (dispatch) => {
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
-
     case STORE_MISSIONS: 
       return action.data;
 
