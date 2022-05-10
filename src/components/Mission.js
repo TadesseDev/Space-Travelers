@@ -12,7 +12,7 @@ const Mission = (prop) => {
   }
 
   return (
-    <tr>
+    <tr data-testid="mission-item">
       <td className="mission-title">{mission.mission_name}</td>
       <td className="mission-paragraph">{mission.description}</td>
       <td className="member-mission">
