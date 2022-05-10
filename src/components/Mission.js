@@ -4,7 +4,7 @@ import { reserveMission } from '../Redux/Missions/Mission';
 const Mission = (prop) => {
   const { mission, id, reserved } = prop;
   const dispatch = useDispatch();
-  
+
   const reserve = (event) => {
     const reserve = event.target.getAttribute('data-reserved');
     const missionId = event.target.getAttribute('data-id');
@@ -16,13 +16,21 @@ const Mission = (prop) => {
       <td className="mission-title">{mission.mission_name}</td>
       <td className="mission-paragraph">{mission.description}</td>
       <td className="member-mission">
-          <button
+      {reserved ?
+           (<button
+            className="active"
+            type="button"
+            label="Active Member"
+          >
+            ACTIVE MEMBER
+          </button>) :
+          (<button
               className="member"
               type="button"
-              label="Member"
+              label="Not a Member"
           >
             NOT A MEMBER
-          </button>
+          </button>)}
       </td>
       <td className="join-mission">
         {reserved ?
