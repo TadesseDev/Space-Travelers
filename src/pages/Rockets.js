@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import Rocket from '../components/Rocket'
-
+import Container from 'react-bootstrap/container'
 export default function Rockets() {
 
   const rockets = useSelector(state => state.Rockets);
   return (
-    <div>
+    <Container>
       {rockets.map((rocket) =>
         <Rocket
           key={rocket.id}
@@ -16,6 +16,6 @@ export default function Rockets() {
           image={rocket.flickr_images}
           reserved={rocket.reserved}
         />)}
-    </div>
+    </Container>
   )
 }
