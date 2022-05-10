@@ -7,6 +7,9 @@ export default function Profile() {
   return (
     <Container>
       <Row>
+        <Col sm={6}>
+
+        </Col>
         <Col sm={6} >
           <h2> My Rockets</h2>
           <Table hover variant="light">
