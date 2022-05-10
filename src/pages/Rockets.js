@@ -13,7 +13,7 @@ export default function Rockets() {
           id={rocket.id}
           name={rocket.rocket_name}
           description={rocket.description}
-          image={rocket.flickr_images}
+          image={rocket.flickr_images[0]}
           reserved={rocket.reserved}
         />)}
     </Container>

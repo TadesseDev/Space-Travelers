@@ -11,8 +11,8 @@ export default function Rocket({ id, name, description, image, reserved }) {
         <h3>{name}</h3>
         <p>{description}</p>
         {reserved ?
-          (<Button className="reserved" id={id}>reserved</Button>) :
-          (<Button variant="outline-dark" className="not-reserved" id={id}>not reserved</Button>)}
+          (<Button className="reserved" id={id} data-reserved={false} >reserved</Button>) :
+          (<Button variant="outline-dark" className="not-reserved" id={id} data-reserved={true} >not reserved</Button>)}
       </Col>
     </Row>
   )
