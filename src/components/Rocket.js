@@ -8,11 +8,11 @@ export default function Rocket({ id, name, description, image, reserved }) {
         <img src={image} alt={name} width="100%" />
       </Col>
       <Col className="rocket-description">
-        <h3>{name}</h3>
+        <h3 className="text-capitalize">{name}</h3>
         <p>{description}</p>
         {reserved ?
-          (<Button className="reserved" id={id} data-reserved={false} >reserved</Button>) :
-          (<Button variant="outline-dark" className="not-reserved" id={id} data-reserved={true} >not reserved</Button>)}
+          (<Button variant="outline-dark " className="reserved text-capitalize" id={id} data-reserved={false} >cancel reservation</Button>) :
+          (<Button className="not-reserved text-capitalize" id={id} data-reserved={true} >reserve rocket</Button>)}
       </Col>
     </Row>
   )
