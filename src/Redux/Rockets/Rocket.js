@@ -15,7 +15,13 @@ const reduceBook = (state = [], action) => {
   switch (action.type) {
     case STORE_ROCKETS:
       return action.payload;
-
+    case TOGGLE_RESERVATION:
+      return [...state.map(rocket => {
+        if (rocket.id === action.payload.id)
+          return { ...rocket, reserved: action.payload.status }
+        return rocket;
+      }
+      )];
     default:
       return state;
   }
