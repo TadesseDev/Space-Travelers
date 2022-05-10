@@ -60,6 +60,19 @@ table {
   padding: 0.2vw 0.5vw;
 }
 
+.active-member {
+  appearance: none;
+  background: none;
+  border: none;
+  background-color: $blue-color;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  width: max-content;
+  font-weight: bold;
+  padding: 0.2vw 0.5vw;
+}
+
 .join {
   appearance: none;
   background: none;
