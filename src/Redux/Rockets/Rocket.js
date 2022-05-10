@@ -11,7 +11,7 @@ export const addRockets = () => (dispatch) => {
 };
 
 const reduceBook = (state = [], action) => {
-  switch (action) {
+  switch (action.type) {
     case STORE_ROCKETS:
       return action.payload;
     default:
