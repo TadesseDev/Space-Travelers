@@ -37,7 +37,7 @@ const Navbar = () => {
       <div id="logo" style={logoStyle}>
         <span id="logo-img" />
         <h1 id="logo-text">
-          Space Travelers' Hubs
+          Space Travelers`&rsquo;` Hub
         </h1>
       </div>
       <ul style={ulStyle}>

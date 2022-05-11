@@ -2,13 +2,12 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import Rocket from '../components/Rocket';
-import { rocketData, STORE_ROCKETS } from '../__mocks__/MockRocketData.js';
+import { rocketData, STORE_ROCKETS } from '../__mocks__/MockRocketData';
 import { toggleReservedAction } from '../Redux/Rockets/Rocket';
 import Store from '../Redux/configureStore';
 import * as RocketActions from '../Redux/Rockets/Rocket';
 
-const mockRocketAPICall = jest.spyOn(RocketActions, 'addRockets')
-  .mockImplementation(() => ({ type: STORE_ROCKETS, payload: rocketData }));
+jest.spyOn(RocketActions, 'addRockets').mockImplementation(() => ({ type: STORE_ROCKETS, payload: rocketData }));
 Store.dispatch(RocketActions.addRockets());
 const storeDataRocket = Store.getState().Rockets;
 describe('Render the Rocket component and check for Proper Rocket component', () => {
@@ -49,28 +48,24 @@ describe('Test for toggle states', () => {
 
   test('Assert dispatching toggleAction for reserved', () => {
     const storeState = Store.getState().Rockets;
-    let toggledRocket = storeState
-      .filter((rocket) => rocket.id === 1)[0];
+    let toggledRocket = storeState.filter((rocket) => rocket.id === 1)[0];
     expect(toggledRocket.reserved).toBeFalsy();
 
     Store.dispatch(toggleReservedAction(toggledRocket.id, true));
     const newState = Store.getState().Rockets;
-    toggledRocket = newState
-      .filter((rocket) => rocket.id === 1)[0];
-    expect(toggledRocket.reserved).toBeTruthy();
+    toggledRocket = newState.filter((rocket) => rocket.id === 1);
+    expect(toggledRocket[0].reserved).toBeTruthy();
   });
 
   test('Assert dispatching toggleAction for reserved', () => {
     const storeState = Store.getState().Rockets;
-    let toggledRocket = storeState
-      .filter((rocket) => rocket.id === 1)[0];
+    let toggledRocket = storeState.filter((rocket) => rocket.id === 1)[0];
     expect(toggledRocket.reserved).toBeTruthy();
 
     Store.dispatch(toggleReservedAction(toggledRocket.id, false));
     const newState = Store.getState().Rockets;
-    toggledRocket = newState
-      .filter((rocket) => rocket.id === 1)[0];
-    expect(toggledRocket.reserved).toBeFalsy();
+    toggledRocket = newState.filter((rocket) => rocket.id === 1);
+    expect(toggledRocket[0].reserved).toBeFalsy();
   });
 });
 

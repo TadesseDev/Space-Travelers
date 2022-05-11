@@ -21,7 +21,7 @@ export default function Missions() {
             <th>Missions</th>
             <th>Description</th>
             <th>Status</th>
-            <th />
+            <th label="Empty" />
           </tr>
         </thead>
         <tbody>

@@ -16,7 +16,9 @@ exports[`Check if Missions page renders correctly 1`] = `
         <th>
           Status
         </th>
-        <th />
+        <th
+          label="Empty"
+        />
       </tr>
     </thead>
     <tbody />
