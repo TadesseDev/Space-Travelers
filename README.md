@@ -10,6 +10,7 @@
 - API Gateway
 
 ## Screenshot
+
 <img src="./1.png">
 <img src="./2.png">
 <img src="./3.png">
@@ -20,10 +21,10 @@
 
 ## Getting Started
 
-1. Open [dev branch](https://github.com/Tadesse-Alemayehu/space-travlers)
+1. Open [dev branch](https://github.com/Tadesse-Alemayehu/space-travelers)
 2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
 3. Type "pwd" to see your working directory.
-4. [clone repository](https://github.com/Tadesse-Alemayehu/space-travlers)(git clone "branch-link")
+4. [clone repository](https://github.com/Tadesse-Alemayehu/space-travelers)(git clone "branch-link")
 5. Run "npm install" to install required packages
 6. run "npm start" to start the website on local server
 7. Enjoy 😎
@@ -38,9 +39,9 @@
 
 👤 **Tadesse Alemayehu**
 
-- GitHub: [@githubhandle](https://github.com/Tadesse-Alemayehu)
-- Twitter: [@twitterhandle](https://twitter.com/TadesseWebDev)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
+- GitHub: [@Tadess-Alemayehu](https://github.com/Tadesse-Alemayehu)
+- Twitter: [@TadesseWebDev](https://twitter.com/TadesseWebDev)
+- LinkedIn: [Tadesse Alemayehu](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
 
 ## Show your support
 
@@ -48,7 +49,7 @@ Give a ⭐️ if you like this project!
 
 ## Submit an issue
 
-[Issue page](https://github.com/Tadesse-Alemayehu/Bookstore/issues)
+[Issue page](https://github.com/Tadesse-Alemayehu/space-travelers/issues)
 
 ## Acknowledgments
 
