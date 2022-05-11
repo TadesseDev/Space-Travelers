@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import App from '../App'
+import App from '../App';
+import Rockets from '../pages/Rockets'
+import renderer from 'react-test-renderer'
 import { Provider } from 'react-redux';
 import store from '../Redux/configureStore';
 import * as RocketCall from '../Redux/Rockets/Rocket'
@@ -39,6 +41,17 @@ describe('Test Rocket with mock API call', () => {
   });
 
 })
+
+
+describe('Snap shot tests', () => {
+  const rocketComponent = renderer.create(
+    <Provider store={store}>
+      <Rockets />
+    </Provider>
+  );
+  expect(rocketComponent).toMatchSnapshot();
+});
+
 
 afterEach(() => {
   jest.clearAllMocks();
