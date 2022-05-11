@@ -6,15 +6,15 @@ import '@testing-library/jest-dom';
 
 // CREATE FAKE useSelector and useDispatch using jest.fn() to create stubs.
 jest.mock('react-redux', () => ({
-    useSelector: jest.fn(),
-    useDispatch: jest.fn(),
+  useSelector: jest.fn(),
+  useDispatch: jest.fn(),
 }));
 
 describe('Test Mission component', () => {
-// Assing mocked functions to useSelectoorMock ans useDispatchMock consts.
+  // Assing mocked functions to useSelectoorMock ans useDispatchMock consts.
   const useSelectorMock = reactRedux.useSelector;
   const useDispatchMock = reactRedux.useDispatch;
-// Create fake store with missions array.
+  // Create fake store with missions array.
   const mockStore = {
     Missions: [
       {
@@ -29,12 +29,12 @@ describe('Test Mission component', () => {
       },
     ],
   };
-// Before each test Initialize functions used as a implementation of the mock.
+  // Before each test Initialize functions used as a implementation of the mock.
   beforeEach(() => {
-    useDispatchMock.mockImplementation(() => () => {});
+    useDispatchMock.mockImplementation(() => () => { });
     useSelectorMock.mockImplementation((state) => state(mockStore));
   });
-// After each test clear the useSelectorMock.
+  // After each test clear the useSelectorMock.
   afterEach(() => {
     useSelectorMock.mockClear();
   });
@@ -60,7 +60,7 @@ describe('Test Mission component', () => {
   });
 
 
-  test('Check if join mission button shows leave mission when change the reserved status', () =>{
+  test('Check if join mission button shows leave mission when change the reserved status', () => {
     mockStore.Missions = [
       { ...mockStore.Missions[0], reserved: true },
     ];
@@ -69,7 +69,7 @@ describe('Test Mission component', () => {
     expect(reserve).toBeInTheDocument();
   })
 
-  test('Check if Leave mission button shows join missionn when change the reserved status', () =>{
+  test('Check if Leave mission button shows join missionn when change the reserved status', () => {
     mockStore.Missions = [
       { ...mockStore.Missions[0], reserved: false },
     ];
@@ -78,7 +78,7 @@ describe('Test Mission component', () => {
     expect(reserve).toBeInTheDocument();
   })
 
-  test('Check if status is active member when the reserved status is true', () =>{
+  test('Check if status is active member when the reserved status is true', () => {
     mockStore.Missions = [
       { ...mockStore.Missions[0], reserved: true },
     ];
@@ -87,7 +87,7 @@ describe('Test Mission component', () => {
     expect(reserve).toBeInTheDocument();
   })
 
-  test('Check if status is not a member when the reserved status is false', () =>{
+  test('Check if status is not a member when the reserved status is false', () => {
     mockStore.Missions = [
       { ...mockStore.Missions[0], reserved: false },
     ];
@@ -97,3 +97,6 @@ describe('Test Mission component', () => {
   })
 });
 
+afterEach(() => {
+  jest.clearAllMocks();
+});

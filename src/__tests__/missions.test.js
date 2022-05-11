@@ -11,3 +11,8 @@ it('Check if Missions page renders correctly', () => {
   );
   expect(tree).toMatchSnapshot();
 });
+
+
+afterEach(() => {
+  jest.clearAllMocks();
+});

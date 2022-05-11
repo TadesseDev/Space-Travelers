@@ -10,3 +10,8 @@ it('Check if Navbar renders correctly', () => {
   );
   expect(tree).toMatchSnapshot();
 });
+
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
