@@ -49,7 +49,8 @@ describe('Test for toggle states', () => {
   });
 
   test('Assert dispatching toggleAction for reserved', () => {
-    let toggledRocket = storeDataRocket
+    const storeState = Store.getState().Rockets;
+    let toggledRocket = storeState
       .filter(rocket => rocket.id === 1)[0];
     expect(toggledRocket.reserved).toBeFalsy();
 
@@ -57,9 +58,20 @@ describe('Test for toggle states', () => {
     const newState = Store.getState().Rockets;
     toggledRocket = newState
       .filter(rocket => rocket.id === 1)[0];
-
     expect(toggledRocket.reserved).toBeTruthy();
-    // console.log('afterx toggle', toggledRocket);
+  });
+
+  test('Assert dispatching toggleAction for reserved', () => {
+    const storeState = Store.getState().Rockets;
+    let toggledRocket = storeState
+      .filter(rocket => rocket.id === 1)[0];
+    expect(toggledRocket.reserved).toBeTruthy();
+
+    Store.dispatch(toggleReservedAction(toggledRocket.id, false));
+    const newState = Store.getState().Rockets;
+    toggledRocket = newState
+      .filter(rocket => rocket.id === 1)[0];
+    expect(toggledRocket.reserved).toBeFalsy();
   });
 
 });
