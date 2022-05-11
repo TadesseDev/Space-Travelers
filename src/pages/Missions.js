@@ -8,20 +8,20 @@ export default function Missions() {
   const dispatch = useDispatch();
   const Missions = useSelector((state) => state.Missions);
   useEffect(() => {
-    if ( Missions.length <= 0)  {
+    if (Missions.length <= 0) {
       dispatch(getMissions());
     }
   }, []);
 
   return (
-    <div>
+    <div data-testid="mission-test">
       <table>
         <thead>
           <tr>
             <th>Missions</th>
             <th>Description</th>
             <th>Status</th>
-            <th></th>
+            <th label="Empty" />
           </tr>
         </thead>
         <tbody>
@@ -36,5 +36,5 @@ export default function Missions() {
         </tbody>
       </table>
     </div>
-  )
+  );
 }
