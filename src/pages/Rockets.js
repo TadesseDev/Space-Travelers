@@ -6,7 +6,7 @@ export default function Rockets() {
 
   const rockets = useSelector(state => state.Rockets);
   return (
-    <Container>
+    <Container data-testid="list-of-rockets">
       {rockets.map((rocket) =>
         <Rocket
           key={rocket.id}
