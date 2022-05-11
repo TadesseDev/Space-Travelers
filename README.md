@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[coming soon]() 😎
+[Go Live](https://tadesse-alemayehu-space-travelers.netlify.app/) 😎
 
 ## Getting Started
 
