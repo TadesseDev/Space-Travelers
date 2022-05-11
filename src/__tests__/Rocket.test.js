@@ -7,10 +7,7 @@ import Store from '../Redux/configureStore';
 import * as RocketActions from '../Redux/Rockets/Rocket'
 import renderer from 'react-test-renderer'
 const mockRocketAPICall = jest.spyOn(RocketActions, 'addRockets')
-  .mockImplementation(() => {
-    console.log("diapatching action");
-    return { type: STORE_ROCKETS, payload: rocketData };
-  });
+  .mockImplementation(() => ({ type: STORE_ROCKETS, payload: rocketData }));
 Store.dispatch(RocketActions.addRockets());
 const storeDataRocket = Store.getState().Rockets;
 describe('Render the Rocket component and check for Proper Rocket component', () => {

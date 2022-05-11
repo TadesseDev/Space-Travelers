@@ -18,6 +18,7 @@ describe('Render the APP component and check for initial Rocket state', () => {
       <App />
     </Provider>
   );
+
   //Assert fetch data is called once
   expect(addRocketsMock).toBeCalledTimes(1)
 
