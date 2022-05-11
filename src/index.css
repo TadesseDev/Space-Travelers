@@ -1,0 +1,29 @@
+:root{
+  --linkColor: #78B7FF;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#logo-img {
+  width: 5vw;
+  height: 5vw;
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3594/3594083.png");
+  background-size: contain;
+}
+
+.profile-table {
+  margin: 0;
+}
