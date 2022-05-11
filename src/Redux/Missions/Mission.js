@@ -8,18 +8,18 @@ export const reserveMission = (id, status) => (
     mission: {
       id,
       status: Boolean(Number(status)),
-    }
+    },
   }
 );
 
 export const getMissions = () => async (dispatch) => {
   fetch('https://api.spacexdata.com/v3/missions')
-    .then(data => data.json())
-    .then(data => {
+    .then((data) => data.json())
+    .then((data) => {
       console.log(data);
       dispatch({ type: STORE_MISSIONS, data });
     })
-    .catch(error => console.log(error));
+    .catch((error) => console.log(error));
 };
 
 const missionsReducer = (state = initialState, action) => {
@@ -28,12 +28,12 @@ const missionsReducer = (state = initialState, action) => {
       return action.data;
 
     case RESERVATION:
-      return [...state.map(mission => {
-        if (mission.mission_id === action.mission.id)
-          return { ...mission, reserved: action.mission.status }
+      return [...state.map((mission) => {
+        if (mission.mission_id === action.mission.id) {
+          return { ...mission, reserved: action.mission.status };
+        }
         return mission;
-      }
-      )];
+      })];
 
     default:
       return state;

@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux';
-import Rocket from '../components/Rocket'
-import Container from 'react-bootstrap/container'
-export default function Rockets() {
+import Container from 'react-bootstrap/container';
+import Rocket from '../components/Rocket';
 
-  const rockets = useSelector(state => state.Rockets);
+export default function Rockets() {
+  const rockets = useSelector((state) => state.Rockets);
   return (
     <Container data-testid="list-of-rockets">
-      {rockets.map((rocket) =>
+      {rockets.map((rocket) => (
         <Rocket
           key={rocket.id}
           id={rocket.id}
@@ -15,7 +15,8 @@ export default function Rockets() {
           description={rocket.description}
           image={rocket.flickr_images[0]}
           reserved={rocket.reserved}
-        />)}
+        />
+      ))}
     </Container>
-  )
+  );
 }

@@ -8,14 +8,14 @@ const Navbar = () => {
     alignItems: 'center',
     margin: '0 5vw',
     padding: '2vw 0',
-    borderBottom: '1px solid #dee2e6'
-  }
+    borderBottom: '1px solid #dee2e6',
+  };
   const ulStyle = {
     display: 'flex',
     gap: '2vw',
     listStyle: 'none',
     padding: '0',
-  }
+  };
   const navLinkStyle = ({ isActive }) => ({
     textDecoration: isActive ? 'underline' : 'none',
     color: 'var(--linkColor)',
@@ -30,13 +30,12 @@ const Navbar = () => {
   const logoStyle = {
     display: 'flex',
     alignItems: 'center',
-    gap: '3vw'
-  }
+    gap: '3vw',
+  };
   return (
     <nav style={navStyle}>
       <div id="logo" style={logoStyle}>
-        <span id="logo-img">
-        </span>
+        <span id="logo-img" />
         <h1 id="logo-text">
           Space Travelers' Hubs
         </h1>

@@ -7,11 +7,10 @@ it('Check if Missions page renders correctly', () => {
   const tree = renderer.create(
     <Provider store={store}>
       <Missions />
-    </Provider>
+    </Provider>,
   );
   expect(tree).toMatchSnapshot();
 });
-
 
 afterEach(() => {
   jest.clearAllMocks();

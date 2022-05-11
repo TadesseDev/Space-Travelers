@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import Missions from '../pages/Missions';
 import * as reactRedux from 'react-redux';
+import Missions from '../pages/Missions';
 import Mission from '../components/Mission';
 import '@testing-library/jest-dom';
 
@@ -59,7 +59,6 @@ describe('Test Mission component', () => {
     expect(screen.getByTestId('mission-item')).toBeInTheDocument();
   });
 
-
   test('Check if join mission button shows leave mission when change the reserved status', () => {
     mockStore.Missions = [
       { ...mockStore.Missions[0], reserved: true },
@@ -67,7 +66,7 @@ describe('Test Mission component', () => {
     render(<Missions />);
     const reserve = screen.getByText('Leave Mission');
     expect(reserve).toBeInTheDocument();
-  })
+  });
 
   test('Check if Leave mission button shows join missionn when change the reserved status', () => {
     mockStore.Missions = [
@@ -76,7 +75,7 @@ describe('Test Mission component', () => {
     render(<Missions />);
     const reserve = screen.getByText('Join Mission');
     expect(reserve).toBeInTheDocument();
-  })
+  });
 
   test('Check if status is active member when the reserved status is true', () => {
     mockStore.Missions = [
@@ -85,7 +84,7 @@ describe('Test Mission component', () => {
     render(<Missions />);
     const reserve = screen.getByText('Active Member');
     expect(reserve).toBeInTheDocument();
-  })
+  });
 
   test('Check if status is not a member when the reserved status is false', () => {
     mockStore.Missions = [
@@ -94,7 +93,7 @@ describe('Test Mission component', () => {
     render(<Missions />);
     const reserve = screen.getByText('NOT A MEMBER');
     expect(reserve).toBeInTheDocument();
-  })
+  });
 });
 
 afterEach(() => {
