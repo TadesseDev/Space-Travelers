@@ -13,7 +13,7 @@ export default function Rocket({ id, name, description, image, reserved }) {
     dispatch(toggleReservedAction(rocketId, reserved));
   }
   return (
-    <Row className="rocket-container align-items-center mt-md-3">
+    <Row className="rocket-container align-items-center mt-md-3" data-testid="rocket">
       <Col sm={5} md={4} lg={3}>
         <img src={image} alt={name} width="100%" />
       </Col>

@@ -16,7 +16,14 @@ describe('Render the APP component and check for initial Rocket state', () => {
       <App />
     </Provider>
   );
-  expect(addRocketsMock).toBeCalled()
+  //Assert fetch data is called once
+  expect(addRocketsMock).toBeCalledTimes(1)
+
+  //Assert the same number of rocket is displayed
+  const storeState = store.getState();
+  const rockets = screen.queryAllByTestId('rocket');
+  expect(rockets.length).toBe(storeState.Rockets.length);
+
 
   test('Assert Rockets component is loaded', () => {
     const rocketsComponent = screen.queryAllByTestId('list-of-rockets')
@@ -29,8 +36,8 @@ describe('Test Rocket with mock API call', () => {
   test('Assert store is updated with Rockets data', () => {
     const storeState = store.getState();
     expect(storeState.Rockets.length).toBe(4);
-    console.log(storeState);
-  })
+  });
+
 })
 
 afterEach(() => {
