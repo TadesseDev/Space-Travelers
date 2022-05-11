@@ -16,7 +16,6 @@ export const getMissions = () => async (dispatch) => {
   fetch('https://api.spacexdata.com/v3/missions')
     .then((data) => data.json())
     .then((data) => {
-      console.log(data);
       dispatch({ type: STORE_MISSIONS, data });
     })
     .catch((error) => console.log(error));
