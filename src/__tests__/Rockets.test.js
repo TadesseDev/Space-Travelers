@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import Rockets from '../pages/Rockets.js'
 import App from '../App'
 import { Provider } from 'react-redux';
 import store from '../Redux/configureStore';
@@ -25,8 +24,9 @@ describe('Render the APP component and check for initial Rocket state', () => {
   });
 })
 
-describe('test rocket with mock API call', () => {
+describe('Test rocket with mock API call', () => {
   const storeState = store.getState();
+  expect(storeState.Rockets.length).toBe(4);
   console.log(storeState);
 })
 
