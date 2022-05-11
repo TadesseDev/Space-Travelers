@@ -43,13 +43,15 @@ describe('Test Rocket with mock API call', () => {
 })
 
 
-describe('Snap shot tests', () => {
+describe('Snap shot tests for Rockets', () => {
   const rocketComponent = renderer.create(
     <Provider store={store}>
       <Rockets />
     </Provider>
   );
-  expect(rocketComponent).toMatchSnapshot();
+  test('Test snapshot match', () => {
+    expect(rocketComponent).toMatchSnapshot();
+  });
 });
 
 

@@ -5,15 +5,16 @@ import { toggleReservedAction } from '../Redux/Rockets/Rocket'
 import { Provider } from 'react-redux';
 import Store from '../Redux/configureStore';
 import * as RocketActions from '../Redux/Rockets/Rocket'
-
+import renderer from 'react-test-renderer'
 const mockRocketAPICall = jest.spyOn(RocketActions, 'addRockets')
   .mockImplementation(() => {
     console.log("diapatching action");
     return { type: STORE_ROCKETS, payload: rocketData };
   });
+Store.dispatch(RocketActions.addRockets());
+const storeDataRocket = Store.getState().Rockets;
 describe('Render the Rocket component and check for Proper Rocket component', () => {
-  Store.dispatch(RocketActions.addRockets());
-  const storeDataRocket = Store.getState().Rockets;
+
   render(
     <Provider store={Store}>
       {storeDataRocket.map((rocket) =>
@@ -74,6 +75,26 @@ describe('Test for toggle states', () => {
     expect(toggledRocket.reserved).toBeFalsy();
   });
 
+});
+
+
+describe('Snap shot tests for Rocket', () => {
+  const RocketList = renderer.create(
+    <Provider store={Store}>
+      {storeDataRocket.map((rocket) =>
+        <Rocket
+          key={rocket.id}
+          id={rocket.id}
+          name={rocket.rocket_name}
+          description={rocket.description}
+          image={rocket.flickr_images[0]}
+          reserved={rocket.reserved}
+        />)}
+    </Provider>
+  );
+  test('Test snapshot match', () => {
+    expect(RocketList).toMatchSnapshot();
+  });
 });
 
 afterEach(() => {
