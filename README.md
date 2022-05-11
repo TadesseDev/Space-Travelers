@@ -1,6 +1,6 @@
 # Space Travelers' Hub
 
-> This is In this task, we work with the real live data from the SpaceX API. We build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+> In this task, we work with the real live data from the SpaceX API. We build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 ## Built With
 
@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Go Live](https://tadesse-alemayehu-space-travelers.netlify.app/) 😎
+[Go Live](https://tadesse-jorge-space-travelers.netlify.app/) 😎
 
 ## Getting Started
 
