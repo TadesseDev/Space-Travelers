@@ -6,7 +6,8 @@ import { useSelector } from 'react-redux';
 
 export default function Profile() {
   const reservedRockets = useSelector((store) => store.Rockets.filter((rocket) => rocket.reserved));
-  const reservedMissions = useSelector((state) => state.Missions.filter((mission) => mission.reserved));
+  const reservedMissions = useSelector((state) => state.Missions
+    .filter((mission) => mission.reserved));
 
   return (
     <Container style={{ margin: '2vw 5vw' }}>
@@ -16,7 +17,7 @@ export default function Profile() {
           <Table className="profile-table" hover variant="light">
             <tbody>
               {reservedMissions.map((mission) => (
-                <tr>
+                <tr key={mission.id}>
                   <td>{mission.mission_name}</td>
                 </tr>
               ))}
@@ -28,7 +29,7 @@ export default function Profile() {
           <Table className="profile-table" hover variant="light">
             <tbody>
               {reservedRockets.map((rocket) => (
-                <tr>
+                <tr key={rocket.id}>
                   <td>{rocket.rocket_name}</td>
                 </tr>
               ))}

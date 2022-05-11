@@ -4,6 +4,7 @@ import {
 } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PropTypes from 'prop-types';
 import { toggleReservedAction } from '../Redux/Rockets/Rocket';
 
 export default function Rocket({
@@ -27,9 +28,16 @@ export default function Rocket({
           {description}
         </p>
         {reserved
-          ? ([<Button variant="outline-dark " className="reserved text-capitalize" id={id} data-id={id} data-reserved={0} onClick={toggleReservation}>cancel reservation</Button>])
+          ? (<Button variant="outline-dark " className="reserved text-capitalize" id={id} data-id={id} data-reserved={0} onClick={toggleReservation}>cancel reservation</Button>)
           : (<Button className="not-reserved text-capitalize" data-id={id} id={id} data-reserved={1} onClick={toggleReservation}>reserve rocket</Button>)}
       </Col>
     </Row>
   );
 }
+Rocket.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  reserved: PropTypes.string.isRequired,
+};
