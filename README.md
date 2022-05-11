@@ -32,9 +32,9 @@
 
 👤 **Jorge Rios**
 
-- GitHub: [@githubhandle](https://github.com/Tadesse-Alemayehu)
-- Twitter: [@twitterhandle](https://twitter.com/TadesseWebDev)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
+- GitHub: [@Alexr16](https://github.com/Alexr16)
+- Twitter: [@ReveloJ](https://twitter.com/ReveloJ)
+- LinkedIn: [Jorge Ríos](https://www.linkedin.com/in/jorgeriosr/)
 
 👤 **Tadesse Alemayehu**
 
