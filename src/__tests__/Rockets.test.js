@@ -3,7 +3,7 @@ import App from '../App'
 import { Provider } from 'react-redux';
 import store from '../Redux/configureStore';
 import * as RocketCall from '../Redux/Rockets/Rocket'
-import { rocketData, STORE_ROCKETS, TOGGLE_RESERVATION } from '../__mocks__/MockRocketData'
+import { rocketData, STORE_ROCKETS } from '../__mocks__/MockRocketData'
 const addRocketsMock = jest.spyOn(RocketCall, 'addRockets')
   .mockImplementation(() => ({ type: STORE_ROCKETS, payload: rocketData }));
 
