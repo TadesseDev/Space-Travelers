@@ -18,12 +18,17 @@ describe('Render the APP component and check for initial Rocket state', () => {
   );
 
   //assert addRocket mock is working
+  expect(addRockets).toBeCalled()
   test('Assert initial rocket list is empty', () => {
     const rocketsComponent = screen.queryAllByTestId('list-of-rockets')
     expect(rocketsComponent.length).toBe(1);
   });
 })
 
+describe('test rocket with mock API call', () => {
+  const storeState = store.getState();
+  console.log(storeState);
+})
 
 
 
