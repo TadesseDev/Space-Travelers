@@ -23,3 +23,7 @@ code {
   background-image: url("https://cdn-icons-png.flaticon.com/512/3594/3594083.png");
   background-size: contain;
 }
+
+.profile-table {
+  margin: 0;
+}

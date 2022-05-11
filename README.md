@@ -10,9 +10,9 @@
 - API Gateway
 
 ## Screenshot
-![Capturexx](https://user-images.githubusercontent.com/69077061/167874968-d41d897e-e787-4b9c-8bd2-fd3b93a2cb7e.PNG)
-![Capturexx2](https://user-images.githubusercontent.com/69077061/167874977-68836ca2-f40b-45d4-9979-5b6cafd9d60b.PNG)
-![Capturexx3](https://user-images.githubusercontent.com/69077061/167874983-6853c492-0f65-4235-99d3-86a2830e8ea2.PNG)
+<img src="./1.png">
+<img src="./2.png">
+<img src="./3.png">
 
 ## Live Demo
 
