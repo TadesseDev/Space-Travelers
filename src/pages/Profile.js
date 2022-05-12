@@ -70,6 +70,7 @@ export default function Profile() {
         </Col>
         <Col sm={6}>
           <h2>My Rockets</h2>
+          <div>{(reservedRockets >= 0) && (<p>No rockets reserved</p>)}</div>
           <Table className="profile-table" hover variant="light">
             <tbody>
               {reservedRockets.map((rocket) => (
