@@ -41,7 +41,7 @@ export default function Profile() {
                 <tr key={mission.mission_id}>
                   <td>
                     {mission.mission_name}
-                    <div>
+                    <div className="profile-buttons">
                       <button
                         className="leave"
                         type="button"
@@ -76,7 +76,7 @@ export default function Profile() {
                 <tr key={rocket.id}>
                   <td>
                     {rocket.rocket_name}
-                    <div>
+                    <div className="profile-buttons">
                       <Button variant="outline-dark " className="reserved text-capitalize" id={rocket.id} data-id={rocket.id} data-reserved={0} onClick={toggleReservation}>cancel reservation</Button>
                       <button
                         className="read-more"

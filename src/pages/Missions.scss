@@ -97,7 +97,13 @@ table {
   cursor: pointer;
 }
 
+.profile-buttons {
+  display: flex;
+  justify-content: end;
+}
+
 .read-more {
+  margin-left: 1vw;
   appearance: none;
   background: none;
   border: none;
