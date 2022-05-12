@@ -96,3 +96,15 @@ table {
   padding: 0.7vw 0.5vw;
   cursor: pointer;
 }
+
+.read-more {
+  appearance: none;
+  background: none;
+  border: none;
+  background-color: $blue-color;
+  color: white;
+  border-radius: 3px;
+  width: max-content;
+  padding: 0.7vw 0.5vw;
+  cursor: pointer;
+}
