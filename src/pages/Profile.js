@@ -11,7 +11,6 @@ export default function Profile() {
   const reservedRockets = useSelector((store) => store.Rockets.filter((rocket) => rocket.reserved));
   const reservedMissions = useSelector((state) => state.Missions
     .filter((mission) => mission.reserved));
-
   const dispatch = useDispatch();
 
   const reserve = (event) => {
@@ -35,6 +34,7 @@ export default function Profile() {
       <Row>
         <Col sm={6}>
           <h2>My Missions</h2>
+          <div>{(reservedMissions >= 0) && (<p>No missions joined</p>)}</div>
           <Table className="profile-table" hover variant="light">
             <tbody>
               {reservedMissions.map((mission) => (
