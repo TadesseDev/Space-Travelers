@@ -28,13 +28,10 @@ describe('Render the Rocket component and check for Proper Rocket component', ()
 
   test('Assert store is updated with a mock data', () => {
     expect(Store.getState().Rockets.length).toBe(rocketData.length);
-    // console.log(Store.getState().Rockets.length)
   });
   const rockets = screen.queryAllByTestId('rocket');
   test('Test contents of the DOM for Rockets', () => {
     expect(rockets.length).toBe(storeDataRocket.length);
-    // assert we have
-    // console.log(rockets.length);
   });
 });
 

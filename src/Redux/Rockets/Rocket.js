@@ -15,7 +15,7 @@ export const addRockets = () => (dispatch) => {
     .then((data) => {
       dispatch({ type: STORE_ROCKETS, payload: data });
     })
-    .catch((error) => console.log(error));
+    .catch((error) => { throw error; });
 };
 
 const rocketReducer = (state = [], action) => {

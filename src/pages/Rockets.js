@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Container from 'react-bootstrap/container';
+import { Container } from 'react-bootstrap';
 import Rocket from '../components/Rocket';
 
 export default function Rockets() {

@@ -29,7 +29,7 @@ exports[`Check if Navbar renders correctly 1`] = `
     <h1
       id="logo-text"
     >
-      Space Travelers\`’\` Hub
+      Space Travelers’ Hub
     </h1>
   </div>
   <ul

@@ -18,7 +18,7 @@ export const getMissions = () => async (dispatch) => {
     .then((data) => {
       dispatch({ type: STORE_MISSIONS, data });
     })
-    .catch((error) => console.log(error));
+    .catch((error) => { throw error; });
 };
 
 const missionsReducer = (state = initialState, action) => {

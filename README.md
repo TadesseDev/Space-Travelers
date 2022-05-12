@@ -1,6 +1,6 @@
 # Space Travelers' Hub
 
-> This is In this task, we work with the real live data from the SpaceX API. We build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+> In this task, we work with the real live data from the SpaceX API. We build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 ## Built With
 
@@ -10,17 +10,18 @@
 - API Gateway
 
 ## Screenshot
+
 <img src="./3.png">
 <img src="./2.png">
 <img src="./1.png">
 
 ## Live Demo
 
-[coming soon]() 😎
+[Go Live](https://tadesse-jorge-space-travelers.netlify.app/) 😎
 
 ## Getting Started
 
-1. Open [dev branch](https://github.com/Tadesse-Alemayehu/space-travlers)
+1. Open [dev branch](https://github.com/Tadesse-Alemayehu/space-travelers)
 2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
 3. Type "pwd" to see your working directory.
 4. [clone repository](https://github.com/Tadesse-Alemayehu/space-travlers)(git clone "branch-link")
@@ -30,6 +31,7 @@ $ npm install # to install required packages
 $ npm run start # to start the website on local server
 ```
 6. Enjoy 😎
+
 
 ## Authors 👱‍♂️
 
@@ -41,9 +43,9 @@ $ npm run start # to start the website on local server
 
 👤 **Tadesse Alemayehu**
 
-- GitHub: [@githubhandle](https://github.com/Tadesse-Alemayehu)
-- Twitter: [@twitterhandle](https://twitter.com/TadesseWebDev)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
+- GitHub: [@Tadess-Alemayehu](https://github.com/Tadesse-Alemayehu)
+- Twitter: [@TadesseWebDev](https://twitter.com/TadesseWebDev)
+- LinkedIn: [Tadesse Alemayehu](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
 
 ## Show your support
 
@@ -51,7 +53,7 @@ Give a ⭐️ if you like this project!
 
 ## Submit an issue
 
-[Issue page](https://github.com/Tadesse-Alemayehu/Bookstore/issues)
+[Issue page](https://github.com/Tadesse-Alemayehu/space-travelers/issues)
 
 ## Acknowledgments
 
