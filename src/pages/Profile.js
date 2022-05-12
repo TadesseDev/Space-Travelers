@@ -26,6 +26,10 @@ export default function Profile() {
     dispatch(toggleReservedAction(rocketId, reserved));
   };
 
+  const readMore = (link) => {
+    window.open(link, '_blank');
+  };
+
   return (
     <Container style={{ margin: '2vw 5vw' }}>
       <Row>
@@ -34,7 +38,7 @@ export default function Profile() {
           <Table className="profile-table" hover variant="light">
             <tbody>
               {reservedMissions.map((mission) => (
-                <tr key={mission.id}>
+                <tr key={mission.mission_id}>
                   <td>
                     {mission.mission_name}
                     <div>
@@ -48,6 +52,14 @@ export default function Profile() {
                         onClick={reserve}
                       >
                         Leave Mission
+                      </button>
+                      <button
+                        className="read-more"
+                        type="button"
+                        label="Read more"
+                        onClick={() => readMore(mission.wikipedia)}
+                      >
+                        Read More
                       </button>
                     </div>
                   </td>
@@ -66,6 +78,14 @@ export default function Profile() {
                     {rocket.rocket_name}
                     <div>
                       <Button variant="outline-dark " className="reserved text-capitalize" id={rocket.id} data-id={rocket.id} data-reserved={0} onClick={toggleReservation}>cancel reservation</Button>
+                      <button
+                        className="read-more"
+                        type="button"
+                        label="Read more"
+                        onClick={() => readMore(rocket.wikipedia)}
+                      >
+                        Read More
+                      </button>
                     </div>
                   </td>
                 </tr>
