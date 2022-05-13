@@ -85,6 +85,11 @@ table {
   cursor: pointer;
 }
 
+.join:hover {
+  background: $border-grey;
+  color: white;
+}
+
 .leave {
   appearance: none;
   background: none;
@@ -95,4 +100,32 @@ table {
   width: max-content;
   padding: 0.7vw 0.5vw;
   cursor: pointer;
+}
+
+.leave:hover {
+  background: $red-color;
+  color: white;
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.read-more {
+  margin-left: 1vw;
+  appearance: none;
+  background: none;
+  border: none;
+  border: 1px solid $blue-color;
+  color: $blue-color;
+  border-radius: 3px;
+  width: max-content;
+  padding: 0.7vw 0.5vw;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  background-color: $blue-color;
+  color: white;
 }
